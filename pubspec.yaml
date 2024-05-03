@@ -30,6 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  sqflite: ^2.3.2
+  snippet_coder_utils: ^1.0.15
+  path:
   intl: ^0.17.0
 
 

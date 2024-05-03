@@ -67,11 +67,11 @@ class Gallerie extends StatelessWidget {
   }
 
   void _onGetGallerieDetails(BuildContext context) {
-    String ville = txt_keywords.text;
+    String keyword = txt_keywords.text;
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => GallerieDetails(ville),
+        builder: (context) => GallerieDetails(keyword),
       ),
     );
   }
