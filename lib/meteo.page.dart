@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voyage/menu/drawer.widget.dart';
 import 'pages/meteo-details.page.dart';
 
 class Meteo extends StatelessWidget {
@@ -18,6 +19,7 @@ class Meteo extends StatelessWidget {
         ),
         backgroundColor: Colors.cyan,
       ),
+      drawer: MyDarwer(),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(top: 20),

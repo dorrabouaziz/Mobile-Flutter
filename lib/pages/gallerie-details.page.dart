@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:voyage/menu/drawer.widget.dart';
 
 class GallerieDetails extends StatefulWidget {
   String keywords = "";
@@ -66,6 +67,7 @@ class _GallerieDetailsState extends State<GallerieDetails> {
         ),
         backgroundColor: Colors.cyan,
       ),
+      drawer: MyDarwer(),
       body: (gallerieData == null)
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(
@@ -78,13 +80,13 @@ class _GallerieDetailsState extends State<GallerieDetails> {
                 margin: EdgeInsets.symmetric(vertical: 10),
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.grey.shade400,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(
                   gallerieData['hits']?[index]['tags'] ?? "",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),

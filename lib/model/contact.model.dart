@@ -1,7 +1,7 @@
 class Contact {
   static String table = "contact";
 
-  int? id;
+  int? id; //?: it can be null
   String? nom;
   int? tel;
 

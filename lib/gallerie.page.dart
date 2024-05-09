@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voyage/menu/drawer.widget.dart';
 import 'package:voyage/pages/gallerie-details.page.dart';
 
 class Gallerie extends StatelessWidget {
@@ -18,6 +19,7 @@ class Gallerie extends StatelessWidget {
         ),
         backgroundColor: Colors.cyan,
       ),
+      drawer: MyDarwer(),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(top: 20),

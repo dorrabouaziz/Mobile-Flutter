@@ -25,16 +25,15 @@ class _AjoutModifContactPageState extends State<AjoutModifContactPage> {
 
         appBar: AppBar(
           title:
-          Text(widget.modifMode ? "Edit Contact Page" : "Add Contact Page",
+          Text(widget.modifMode ? " Page Modifier Contact" : "Page Ajout Contact",
               style: TextStyle(
-                color: Colors.blueGrey[900],
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
               )),
-          backgroundColor: Colors.blueAccent[100],
+          backgroundColor: Colors.cyan,
           bottom: PreferredSize(
             preferredSize: Size.fromHeight(5),
             child: Container(
-              color: Colors.limeAccent[200],
               height: 3,
             ),
           ),
@@ -42,7 +41,7 @@ class _AjoutModifContactPageState extends State<AjoutModifContactPage> {
         drawer: MyDarwer(),
         body: Form(
           key: globalKey,
-          child: _formUI(context),
+          child: _formUI(),
         ),
         bottomNavigationBar: SizedBox(
           height: 100,
@@ -51,7 +50,7 @@ class _AjoutModifContactPageState extends State<AjoutModifContactPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               FormHelper.submitButton(
-                widget.modifMode ? "Edit" : "Add",
+                widget.modifMode ? "Modifier" : "Ajouter",
                     () {
                   if (validateAndSave()) {
                     if (widget.modifMode) {
@@ -87,7 +86,7 @@ class _AjoutModifContactPageState extends State<AjoutModifContactPage> {
     super.initState();
     if(widget.modifMode) contact =widget.contact!;
   }
-  _formUI(BuildContext context) {
+  _formUI() {
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(10),

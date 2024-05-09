@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
+import 'package:voyage/menu/drawer.widget.dart';
 
 class MeteoDetailsPage extends StatefulWidget {
   String ville = "";
@@ -50,6 +51,7 @@ class _MeteoDetailsPageState extends State<MeteoDetailsPage> {
         ),
         backgroundColor: Colors.cyan,
       ),
+      drawer: MyDarwer(),
       body: ListView.builder(
         itemCount: (meteoData == null ? 0 : meteoData['list'].length),
         itemBuilder: (context, index) {
